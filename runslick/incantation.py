@@ -1,5 +1,4 @@
 import logging as log
-import shlex
 from typing import Union
 
 # local package imports
