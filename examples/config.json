@@ -2,7 +2,7 @@
     "service": {
         "log_level": "DEBUG",
         "hotkey": "Alt+Q",
-        "terminal": "xterm -hold -e",
+        "terminal": "mate-terminal --tab -e",
         "open": "xdg-open"
     },
     "magic_words": {
@@ -19,15 +19,8 @@
             "terminal": false,
             "hotkey": "Alt+G"
         },
-        "tl": {
-            "incantation": {
-                "format": "https://www.torrentleech.org/torrents/browse/index/query/{search_query}",
-                "search_query": "url"
-            },
-            "terminal": false
-        },
         "syu": {
-            "incantation": "sudo apt-get dist-upgrade",
+            "incantation": "sudo apt-get update --fix-missing; sudo apt-get upgrade -y; sudo apt-get dist-upgrade -y; sudo apt-get autoremove -y;",
             "terminal": true
         },
         "home": {

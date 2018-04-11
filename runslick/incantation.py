@@ -11,7 +11,7 @@ class Incantation(object):
         INCANTATION_SCHEMA(config)
         self.name = name
         if isinstance(config, str):
-            self.cmd = shlex.split(config)
+            self.cmd = config
             self.format_str = config
             self.params = {}
         elif isinstance(config, dict):
@@ -30,7 +30,7 @@ class Incantation(object):
                 if param_type == "url":
                     argument = argument.replace(' ', '%20')
                     kwargs[param] = argument
-            return shlex.split(self.format_str.format(**kwargs))
+            return self.format_str.format(**kwargs)
         log.error("No PromptManager provided, cannot fill parameters for: %s", self.format_str)
         return None
 

@@ -55,7 +55,8 @@ def execute(incantation: Incantation, exec_cmd, prompt_manager=None):
     log.info("Executing: %s", incantation)
     cmd = incantation.concretize(prompt_manager)
     if cmd:
-        cmd = shlex.split(exec_cmd) + cmd
+        cmd = shlex.split(exec_cmd) + [cmd]
+        log.info("Executing: %s", str(cmd))
         Popen(cmd)
     else:
         log.error("Could not concretize incantation: %s", incantation)
