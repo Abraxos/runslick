@@ -1,0 +1,7 @@
+pynput
+click
+arrow
+pytest
+pytest-cov
+pylint
+voluptuous

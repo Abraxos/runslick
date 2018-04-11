@@ -1,0 +1,37 @@
+{
+    "service": {
+        "log_level": "DEBUG",
+        "hotkey": "Alt+Q",
+        "terminal": "xterm -hold -e",
+        "open": "xdg-open"
+    },
+    "magic_words": {
+        "test": {
+            "incantation": "echo 'Hello, world!'",
+            "terminal": true,
+            "hotkey": "Alt+W"
+        },
+        "google": {
+            "incantation": {
+                "format": "https://www.google.com/search?&q={search_query}",
+                "search_query": "url"
+            },
+            "terminal": false,
+            "hotkey": "Alt+G"
+        },
+        "tl": {
+            "incantation": {
+                "format": "https://www.torrentleech.org/torrents/browse/index/query/{search_query}",
+                "search_query": "url"
+            },
+            "terminal": false
+        },
+        "syu": {
+            "incantation": "sudo apt-get dist-upgrade",
+            "terminal": true
+        },
+        "home": {
+            "incantation": "/home/eugene"
+        }
+    }
+}
